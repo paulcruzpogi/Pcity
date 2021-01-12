@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Neon Admin Panel" />
+	<meta name="author" content="" />
+
+	<title>Picture City | Framing</title>
+
+	<link rel="stylesheet" href="assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
+	<link rel="stylesheet" href="assets/css/font-icons/entypo/css/entypo.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/neon-core.css">
+	<link rel="stylesheet" href="assets/css/neon-theme.css">
+	<link rel="stylesheet" href="assets/css/neon-forms.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+
+	<script src="assets/js/jquery-1.11.0.min.js"></script>
+	<script src="assets/imports/sweetalert/sweetalert.min.js"></script>
+	<script>$.noConflict();</script>
+
+	<!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+<style>
+b
+{
+	color:#373e4a !important;
+}
+</style>
+</head>
+<body class="page-body page-left-in" data-url="http://neon.dev">
+
+<div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->
+	
+	<div class="sidebar-menu">
+
+		<div class="sidebar-menu-inner">
+			
+			<header class="logo-env">
+
+				<!-- logo -->
+				<div class="logo">
+					<a href="index.html">
+						<h2 style='color:white;'>[ LOGO ]</h2>
+					</a>
+				</div>
+
+				<!-- logo collapse icon -->
+				<div class="sidebar-collapse">
+					<a href="#" class="sidebar-collapse-icon"><!-- add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition -->
+						<i class="entypo-menu"></i>
+					</a>
+				</div>
+
+								
+				<!-- open/close menu icon (do not remove if you want to enable menu on mobile devices) -->
+				<div class="sidebar-mobile-menu visible-xs">
+					<a href="#" class="with-animation"><!-- add class "with-animation" to support animation -->
+						<i class="entypo-menu"></i>
+					</a>
+				</div>
+
+			</header>
+			
+			<div class="sidebar-user-info">
+
+				<div class="sui-normal">
+					<a href="#" class="user-link">
+						<img src="logo.jpg" alt="" class="img-circle" style="max-width: 50px; max-height: 50px;"/>
+
+						<span>Admin </span>
+						<strong>Juan Dela Cruz</strong>
+					</a>
+				</div>
+
+				<div class="sui-hover inline-links animate-in"><!-- You can remove "inline-links" class to make links appear vertically, class "animate-in" will make A elements animateable when click on user profile -->
+					
+
+					<a href="mailbox.html">
+						<i class="entypo-cog"></i>
+						Change Password
+					</a>
+
+					<a href="extra-lockscreen.html">
+						<i class="entypo-logout"></i>
+						Log Out
+					</a>
+
+					<span class="close-sui-popup">&times;</span><!-- this is mandatory -->				</div>
+			</div>
+									
+			<ul id="main-menu" class="main-menu">
+				<!-- add class "multiple-expanded" to allow multiple submenus to open -->
+				<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+				<li>
+					<a href="dashboard.html" >
+						<i class="entypo-gauge"></i>
+						<span class="title">Dashboard</span>
+					</a>
+				</li>
+				<li>
+					<a href="ui-panels.html">
+						<i class="entypo-newspaper"></i>
+						<span class="title">System Setup</span>
+					</a>
+					<ul>
+						<li>
+							<a href="ssusers.html">
+								<i class="entypo-user-add"></i>
+								<span class="title">Users</span>
+							</a>
+						</li>
+						<li>
+							<a href="sssizes.html">
+								<i class="entypo-gauge"></i>
+								<span class="title">Sizes</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="opened active">
+					<a href="forms-main.html">
+						<i class="entypo-window"></i>
+						<span class="title">Transaction</span>
+					</a>
+					<ul>
+						<li>
+							<a href="request.html">
+								<i class="entypo-leaf"></i>
+								<span class="title">Request</span>
+							</a>
+						</li>
+						<li>
+							<a href="printing.html">
+								<i class="entypo-print"></i>
+								<span class="title">Print</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="framing.html">
+								<i class="entypo-doc-landscape"></i>
+								<span class="title">Frame</span>
+							</a>
+						</li>
+						<li>
+							<a href="packagingmem.html">
+								<i class="entypo-box"></i>
+								<span class="title">Packaging Memo</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="charts.html">
+						<i class="entypo-chart-bar"></i>
+						<span class="title">Reports</span>
+					</a>
+					<ul>
+						<li>
+							<a href="reportslist.html">
+								<i class="entypo-flow-line"></i>
+								<span class="title">Request List</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			
+		</div>
+
+	</div>
+
+	<div class="main-content">
+				
+		<div class="row">
+		
+			<!-- Profile Info and Notifications -->
+			<div class="col-md-6 col-sm-8 clearfix">
+				<ul class="user-info pull-left pull-right-xs pull-none-xsm">
+		
+					<!-- Raw Notifications -->
+					<li class="notifications dropdown">
+		
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+							<i class="entypo-attention"></i>
+							<span class="badge badge-danger">86</span>
+						</a>
+		
+						<ul class="dropdown-menu">
+							<li class="top">
+								<p class="small">
+									You have <strong>86</strong> pending request that needs action.
+								</p>
+							</li>
+							
+							<li>
+								<ul class="dropdown-menu-list scroller">
+									<li class="unread notification-info">
+										<a href="#">
+											<i class="entypo-leaf pull-right"></i>
+											
+											<span class="line">
+												<strong>Trinoma</strong>
+											</span>
+											
+											<span class="line small">
+												January 11, 2020 - 12:54 PM
+											</span>
+										</a>
+									</li>
+									<li class="unread notification-info">
+										<a href="#">
+											<i class="entypo-leaf pull-right"></i>
+											
+											<span class="line">
+												<strong>Trinoma</strong>
+											</span>
+											
+											<span class="line small">
+												January 11, 2020 - 12:50 PM
+											</span>
+										</a>
+									</li>
+									<li class="unread notification-info">
+										<a href="#">
+											<i class="entypo-leaf pull-right"></i>
+											
+											<span class="line">
+												<strong>Trinoma</strong>
+											</span>
+											
+											<span class="line small">
+												January 11, 2020 - 12:20 PM
+											</span>
+										</a>
+									</li>
+									<li class="unread notification-info">
+										<a href="#">
+											<i class="entypo-leaf pull-right"></i>
+											
+											<span class="line">
+												<strong>Trinoma</strong>
+											</span>
+											
+											<span class="line small">
+												January 11, 2020 - 12:01 PM
+											</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							
+							<li class="external">
+								<a href="#">View all notifications</a>
+							</li>
+						</ul>
+		
+					</li>
+				</ul>
+		
+			</div>
+		
+		
+			<!-- Raw Links -->
+			<div class="col-md-6 col-sm-4 clearfix hidden-xs">
+		
+				<ul class="list-inline links-list pull-right">
+					<li class="dropdown language-selector">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-close-others="true">
+							<i class="entypo-user"></i>
+							Account
+
+						</a>
+						<ul class="dropdown-menu pull-right">
+							<li>
+								<a href="#" class="active">
+									<i class="entypo-cog right"></i> Change Password 
+								</a>
+								<a href="index.html">
+									<i class="entypo-logout right"></i> Log Out
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+		
+			</div>
+		
+		</div>
+		
+		<hr />
+		
+		<ol class="breadcrumb bc-3" >
+			<li>
+				<a href="#"><i class="fa-home"></i>Transaction</a>
+			</li>
+			<li class="active">
+				<strong>Framing</strong>
+			</li>
+		</ol>
+		
+		<br />
+		
+		<h2>FRAMING REQUEST</h2>
+		<table class="table table-bordered datatable" id="table-1">
+			<thead>
+				<tr>
+					<th>PF No</th>
+					<th>Branch</th>
+					<th>Customer Name</th>
+					<th>Size</th>
+					<th>Date Sent</th>
+					<th>Status</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="even gradeC">
+					<td>054-111222333</td>
+					<td>Ayala Town Center</td>
+					<td>John A. Doe</td>
+					<td>ACWF 8x10</td>
+					<td>January 10, 2020 11:27 AM</td>
+					<td><div class="label label-success">For Frame</div></td>
+					<td>
+					<button type="button" class="btn btn-blue btn-sm"  data-toggle="tooltip" data-placement="top" data-original-title="Forward Request" onclick="jQuery('#sample-modal-dialog-2').modal('show');"><i class="entypo-ticket"></i></button>
+					<button type="button" class="btn btn-info btn-sm"  data-toggle="tooltip" data-placement="top" data-original-title="View Request Details" onclick="jQuery('#sample-modal-dialog-1').modal('show');"><i class="entypo-info"></i></button>
+					</td>
+				</tr>
+				<tr class="even gradeC">
+					<td>054-111222332</td>
+					<td>Ayala Town Center</td>
+					<td>Paul John Cruz</td>
+					<td>ACWF 8x10</td>
+					<td>January 08, 2020 05:21 PM</td>
+					<td><div class="label label-success">For Frame</div></td>
+					<td>
+					<button type="button" class="btn btn-blue btn-sm"  data-toggle="tooltip" data-placement="top" data-original-title="Forward Request" onclick="jQuery('#sample-modal-dialog-2').modal('show');"><i class="entypo-ticket"></i></button>
+					<button type="button" class="btn btn-info btn-sm"  data-toggle="tooltip" data-placement="top" data-original-title="View Request Details" onclick="jQuery('#sample-modal-dialog-1').modal('show');"><i class="entypo-info"></i></button>
+				</tr>
+				<tr class="even gradeC">
+					<td>054-111222331</td>
+					<td>Ayala Town Center</td>
+					<td>Juan Dela Cruz</td>
+					<td>ACWF 8x10</td>
+					<td>January 07, 2020 03:27 PM</td>
+					<td><div class="label label-success" style="background-color: #57a600;" disabled>Delivered to HO</div></td>
+					<td>
+					<button type="button" class="btn btn-blue btn-sm" disabled><i class="entypo-ticket"></i></button>
+					<button type="button" class="btn btn-info btn-sm"  data-toggle="tooltip" data-placement="top" data-original-title="View Request Details" onclick="jQuery('#sample-modal-dialog-1').modal('show');"><i class="entypo-info"></i></button>
+				</tr>
+			</tbody>
+		</table>
+		
+		<script type="text/javascript">
+		var responsiveHelper;
+		var breakpointDefinition = {
+		    tablet: 1024,
+		    phone : 480
+		};
+		var tableContainer;
+		
+			jQuery(document).ready(function($)
+			{
+				tableContainer = $("#table-1");
+				
+				tableContainer.dataTable({
+					"sPaginationType": "bootstrap",
+					"aLengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+					"bStateSave": true,
+					
+		
+				    // Responsive Settings
+				    bAutoWidth     : false,
+				    fnPreDrawCallback: function () {
+				        // Initialize the responsive datatables helper once.
+				        if (!responsiveHelper) {
+				            responsiveHelper = new ResponsiveDatatablesHelper(tableContainer, breakpointDefinition);
+				        }
+				    },
+				    fnRowCallback  : function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+				        responsiveHelper.createExpandIcon(nRow);
+				    },
+				    fnDrawCallback : function (oSettings) {
+				        responsiveHelper.respond();
+				    }
+				});
+				
+				$(".dataTables_wrapper select").select2({
+					minimumResultsForSearch: -1
+				});
+			});
+
+		function forwardsubmit()
+		{
+			swal({
+               title: "Confirmation",
+               text: "Are you sure you want to FORWARD request for framing?",
+               icon: "warning",
+  			   closeOnClickOutside: false,
+               buttons: true,
+       		}).then((isConfirm) =>  {
+               if (isConfirm) {
+                   swal("Success!", "Request has been forwarded.", "success");
+                   jQuery("#sample-modal-dialog-2").modal("hide");
+               } 
+               else 
+               {
+                   swal("Cancelled", "Operation cancelled.", "error");
+               }
+           });
+		}
+		</script>
+		
+		<br />
+</div>
+
+
+	<!-- Sample Modal (Default skin) -->
+	<div class="modal fade" id="sample-modal-dialog-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">View Details Request</h4>
+				</div>
+				
+				<div class="modal-body">
+					<div class="col-md-12" style="padding-bottom:15px;">
+						<b>Branch</b>
+						<select class="form-control" readonly>
+							<option>SELECT . . .</option>
+							<option selected>TRINOMA</option>
+							<option>AYALA TOWN CENTER</option>
+						</select>
+					</div>
+					<div class="col-md-12" style="padding-bottom:15px;">
+						<b>PF Number</b>
+						<input type="text" class="form-control" value="054-111222333" readonly>
+					</div>
+					<div class="col-md-12" style="padding-bottom:15px;">
+						<b>Size</b>
+						<select class="form-control" readonly>
+							<option>SELECT . . .</option>
+							<option selected>ACWF 8x10.</option>
+						</select>
+					</div>
+					<div class="col-md-12" style="padding-bottom:15px;">
+						<b>Link Raw</b>
+						<input type="text" class="form-control" value="https://drive.google.com/open?id=1T9DfM1VGFOdWdg_TArHU3MFBpj-123456" readonly>
+					</div>
+					<div class="col-md-12" style="padding-bottom:15px;">
+						<b>Link Edited</b>
+						<input type="text" class="form-control" value="https://drive.google.com/open?id=1T9DfM1VGFOdWdg_TArHU3MFBpj-123456" readonly>
+					</div>
+					<div class="col-md-12" style="padding-bottom:15px;">
+						<b>Quantity</b>
+						<input type="text" class="form-control" value="1" readonly>
+					</div>
+					<div class="col-md-12" style="padding-bottom:15px;">
+						<b>Customer Name</b>
+						<input type="text" class="form-control" value="Juan Dela Cruz" readonly>
+					</div>
+					<div class="col-md-12" style="padding-bottom:15px;">
+						<b>Remarks</b>
+						<textarea class="form-control" readonly>Great!</textarea> 
+					</div>
+				</div>
+				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="sample-modal-dialog-2">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Forward to HO</h4>
+				</div>
+				
+				<div class="modal-body">
+					<div class="col-md-12" style="padding-bottom:15px;">
+						<b>PF Number</b>
+						<input type="text" class="form-control" value="054-111222333" readonly>
+					</div>
+					<div class="col-md-12" style="padding-bottom:15px;">
+						<b>Size</b>
+						<select class="form-control" readonly>
+							<option>SELECT . . .</option>
+							<option selected>ACWF 8x10.</option>
+						</select>
+					</div>
+					<div class="col-md-12" style="padding-bottom:15px;">
+						<b>Customer Name</b>
+						<input type="text" class="form-control" value="Juan Dela Cruz" readonly>
+					</div>
+					<div class="col-md-12" style="padding-bottom:15px;">
+						<b>Remarks</b>
+						<textarea class="form-control" placeholder="If you have any remarks"></textarea> 
+					</div>
+				</div>
+				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-info" onclick="forwardsubmit()">Submit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- Imported styles on this page -->
+	<link rel="stylesheet" href="assets/js/datatables/responsive/css/datatables.responsive.css">
+	<link rel="stylesheet" href="assets/js/select2/select2-bootstrap.css">
+	<link rel="stylesheet" href="assets/js/select2/select2.css">
+
+	<!-- Bottom scripts (common) -->
+	<script src="assets/js/gsap/main-gsap.js"></script>
+	<script src="assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
+	<script src="assets/js/bootstrap.js"></script>
+	<script src="assets/js/joinable.js"></script>
+	<script src="assets/js/resizeable.js"></script>
+	<script src="assets/js/neon-api.js"></script>
+	<script src="assets/js/jquery.dataTables.min.js"></script>
+	<script src="assets/js/datatables/TableTools.min.js"></script>
+
+
+	<!-- Imported scripts on this page -->
+	<script src="assets/js/dataTables.bootstrap.js"></script>
+	<script src="assets/js/datatables/jquery.dataTables.columnFilter.js"></script>
+	<script src="assets/js/datatables/lodash.min.js"></script>
+	<script src="assets/js/datatables/responsive/js/datatables.responsive.js"></script>
+	<script src="assets/js/select2/select2.min.js"></script>
+	<script src="assets/js/neon-chat.js"></script>
+	<script src="assets/js/toastr.js"></script>
+
+
+	<!-- JavaScripts initializations and stuff -->
+	<script src="assets/js/neon-custom.js"></script>
+
+
+	<!-- Demo Settings -->
+	<script src="assets/js/neon-demo.js"></script>
+
+</body>
+</html>
