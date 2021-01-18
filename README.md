@@ -1,1 +1,1 @@
-# Picture City Canvas Monitoring Projectzxs
+dbname = pcity_db
