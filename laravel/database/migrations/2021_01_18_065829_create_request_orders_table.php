@@ -14,7 +14,12 @@ class CreateRequestOrdersTable extends Migration
     public function up()
     {
         Schema::create('request_orders', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('pf_number');
+            $table->string('branch_name');
+            $table->string('customer_name');
+            $table->string('size');
+            $table->string('memo');
             $table->timestamps();
         });
     }

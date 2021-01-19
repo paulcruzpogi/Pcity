@@ -15,7 +15,8 @@ class RequestOrderController extends Controller
     public function index()
     {
         //return view('contributions.index',compact('contributions'));
-        return view('request.index');
+        $request = RequestOrder::all();
+        return view('request.index',compact('request')); 
     }   
 
     /**
@@ -36,7 +37,30 @@ class RequestOrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $this->validate($request, [
+            'pf_number'=>'required',
+            'branch_name'=>'required',
+            'customer_name'=>'required',
+            'size'=>'required',
+            'memo'=>'required',      
+            ]);
+
+        $reqsorder = new RequestOrder;
+
+        $reqsorder->pf_number = $request->input('pf_number');
+        $reqsorder->branch_name = $request->input('branch_name');
+        $reqsorder->customer_name = $request->input('customer_name');
+        $reqsorder->size = $request->input('size');
+        $reqsorder->memo = $request->input('memo');
+
+
+        // dd($reqsorder);
+
+        $reqsorder->save();
+
+        return redirect('/request/index')->with('success', 'Successfully Added !');
+
     }
 
     /**

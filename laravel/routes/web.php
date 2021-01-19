@@ -20,5 +20,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/request/index', [App\Http\Controllers\RequestOrderController::class, 'index'])->name('index');
 
+
+// Request route
+// Route::get('/request/index', [App\Http\Controllers\RequestOrderController::class, 'index'])->name('index');
+
+Route::get('/request/index', [App\Http\Controllers\RequestOrderController::class, 'store'])->name('index');
+
+Route::resource('/request/index', '\App\Http\Controllers\RequestOrderController');

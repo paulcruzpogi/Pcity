@@ -91,7 +91,7 @@
 					</a>
 					<ul>
 						<li>
-							<a href="request/index">
+							<a href="/request/index">
 								<i class="entypo-leaf"></i>
 								<span class="title">Request</span>
 							</a>
